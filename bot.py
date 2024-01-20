@@ -30,6 +30,14 @@ spltxt1 = input().strip().upper()
 spltxt = to_lat(spltxt1)
 result = add_spaces(spltxt)
 print(result)
+
+#Полученный ключи путем взлома
+tetx = spltxt1.replace(' ','')
+tsts = result.replace(' ','')
+kord = tetx.index('А')
+if spltxt1.count(tetx[kord]) == result.count(tsts[kord]):
+    print(f'Взломанный ключ:{tsts[kord]}')
+
 while True:
     sym = input().upper().strip()
     print(f'В открытом тексте:{spltxt1.count(sym)}', f'В закрытом тексте:{result.count(sym)}')
