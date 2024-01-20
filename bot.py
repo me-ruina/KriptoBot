@@ -31,5 +31,5 @@ spltxt = to_lat(spltxt1)
 result = add_spaces(spltxt)
 print(result)
 while True:
-    sym = input()
+    sym = input().upper().strip()
     print(f'В открытом тексте:{spltxt1.count(sym)}', f'В закрытом тексте:{result.count(sym)}')
